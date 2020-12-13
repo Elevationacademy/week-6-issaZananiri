@@ -1,0 +1,44 @@
+:root {
+    --glow-color: #F39C12;
+}
+
+
+@keyframes halo-glowing {
+    from {
+        box-shadow: -1px -1px 5px 5px var(--glow-color);
+    }
+    to {
+        box-shadow: -10px -10px 30px 30px var(--glow-color);
+    }
+} 
+
+body {
+    display: grid;
+    background-color: #000000;
+
+}
+.ballsHalo {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    background-color: var(--glow-color);
+    width: 200px;
+    height: 200px;
+    animation-name: halo-glowing;
+    animation-duration: 2s;
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  
+}
+
+.ballsHalo:hover {
+    box-shadow: -10px -10px 30px 30px var(--glow-color);
+}
+
+.ballsHalo {
+    box-shadow: -1px -1px 5px 5px var(--glow-color);
+    transition: box-shadow 2s;
+    transition-timing-function: linear;
+}
